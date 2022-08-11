@@ -1,7 +1,6 @@
 # project specific
 data/
 results/
-config.py
 test.py
 *.json
 
