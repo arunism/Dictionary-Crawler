@@ -1,3 +1,8 @@
+import requests
+from builtins import str
+from typing import Dict
+
+
 class BaseEngine:
     def __init__(self, key: str = None, delay: float = None, language: str = 'en') -> None:
         self.key = key
@@ -9,9 +14,11 @@ class BaseEngine:
         return NotImplementedError
 
 
-class URL:
-    def __init__(
-            self,
-            template: dict = {}
-    ) -> None:
-        pass
+class Request:
+    def __init__(self, url: str, params: Dict[str, str] = {}) -> None:
+        self.url = url
+        self.params = params
+
+    def parse_text(self) -> Dict:
+        data = requests.get(self.url, self.params).json()
+        return data

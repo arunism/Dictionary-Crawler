@@ -1,3 +1,3 @@
-from wmtk.base.base import BaseEngine
+from wmtk.base.base import BaseEngine, Request
 
-__all__ = ['BaseEngine']
+__all__ = ['BaseEngine', 'Request']

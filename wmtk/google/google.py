@@ -1,6 +1,6 @@
-import requests
 from wmtk.base import BaseEngine
 from wmtk.config import GOOGLE_CUSTOM_SEARCH_URL, GOOGLE_API_KEY, GOOGLE_SEARCH_ENGINE_ID
+from wmtk.base import Request
 
 
 class Google(BaseEngine):
@@ -8,12 +8,13 @@ class Google(BaseEngine):
         super(Google, self).__init__(key, delay, language)
 
     def search(self, query: str = '', category: str = 'search', cx: str = None):
-        data = requests.get(
+        req = Request(
             url=GOOGLE_CUSTOM_SEARCH_URL,
             params={
+                'q': query,
                 'key': GOOGLE_API_KEY,
-                'cx': GOOGLE_SEARCH_ENGINE_ID,
-                'q': query
+                'cx': GOOGLE_SEARCH_ENGINE_ID
             }
-        ).json()
+        )
+        data = req.parse_text()
         return data

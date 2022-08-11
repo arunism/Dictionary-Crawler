@@ -13,6 +13,7 @@ The content of `config.py` file should follow the format below:
 # GOOGLE
 GOOGLE_CUSTOM_SEARCH_URL = 'https://www.googleapis.com/customsearch/v1?'
 GOOGLE_API_KEY = 'your_google_custom_search_engine_api_key'
+GOOGLE_SEARCH_ENGINE_ID = 'your_google_search_engine_id'
 ```
 
 - `Remember:` This should be done before you get started with the project or it may not work as expected.
