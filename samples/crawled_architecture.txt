@@ -1,0 +1,18 @@
+{
+    'word': 'antioxidant',
+    'pronunciation': 'jgkjag',
+    'meaning': {
+        'noun': {
+            1: {
+                'subject': '',
+                'text': '',
+                'example': ''
+            },
+            2: {
+                'subject': '',
+                'text': '',
+                'example': ''
+            }
+        }
+    }
+}

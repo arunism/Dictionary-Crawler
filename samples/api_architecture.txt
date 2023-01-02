@@ -1,0 +1,17 @@
+[
+    {
+        "term": "Apple",
+        "language": {
+            languageCode: "ENG",
+            languageName: "English"
+        },
+        "entryDefinitionsList": [{
+            "definition": ["meaning"],
+            "usage": ["example"],
+            "entryClassification": {
+                classificationName: "Noun",
+                classificationCode: "n."
+            }
+        }]
+    }
+]
