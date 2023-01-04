@@ -4,7 +4,7 @@ import csv
 fields = list()
 rows = list()
 
-def get_all_links(alphabet):
+def read_all_links(alphabet):
     filename = f'./my_files/csv_files/{alphabet}.csv'
     with open(filename, 'r', encoding="utf-8") as file:
         reader = csv.reader(file)
@@ -16,8 +16,9 @@ def get_all_links(alphabet):
         # print("Total no. of rows: %d"%(reader.line_num))
     return rows
 
-count = 0
-for alphabet in string.ascii_lowercase:
-    word_links = get_all_links(alphabet)
-    count += len(word_links)
-    print(count)
+def get_count():
+    count = 0
+    for alphabet in string.ascii_lowercase:
+        word_links = read_all_links(alphabet)
+        count += len(word_links)
+    return count

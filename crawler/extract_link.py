@@ -25,7 +25,7 @@ def get_links(alphabet):
             all_words = [*all_words, *list(word_list)]
         else:
             break
-    return all_words
+    save_links(alphabet, all_words)
 
 
 def save_links(alphabet, words):
