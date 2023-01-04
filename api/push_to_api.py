@@ -1,6 +1,6 @@
 import json
 import requests
-from constant import AUTH_TOKEN
+from constant import AUTH_TOKEN, API_URL, API_ENDPOINT
 
 
 header = {
@@ -22,9 +22,7 @@ data = {
 
 data = json.dumps(data)
 
-endpoint = '/api/v1/Terms/AddNew'
-url = 'http://dictionary.arjun.com.np'
-endpoint = f'{url}{endpoint}'
+endpoint = f'{API_URL}{API_ENDPOINT}'
 
 response = requests.post(endpoint, data=data, headers=header)
 print(response)
